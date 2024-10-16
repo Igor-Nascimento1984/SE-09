@@ -12,6 +12,12 @@ public class Product {
 		this.quantidade = quantidade;
 	}
 	
+	public Product(String nome,double preco) {
+		this.nome = nome;
+		this.preco = preco;
+		this.quantidade = 0;
+	}
+	
 	public double quanTotalEmEstoque() {
 		return preco*quantidade;
 	}
