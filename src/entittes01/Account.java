@@ -51,13 +51,13 @@ public class Account {
 		this.saldo -= (saldo + 5);
 	}
 	
-	/*public String toString() {
+	public String toString() {
 		return "CONTA: "
 				+ numeroConta
 				+" - TITULAR: "
 				+ nome
 				+" - SALDO: R$"
 				+saldo;
-	}*/
+	}
 	 
 }

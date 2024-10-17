@@ -11,59 +11,45 @@ public class Program {
 
 		Locale.setDefault(Locale.US);
 		Scanner edd = new Scanner(System.in);
+		Account conta;
 
 		System.out.print("NUMERO CONTA: ");
 		int numeroConta = edd.nextInt();
 		System.out.print("TITULAR:");
-		String nome = edd.next();
-		//edd.nextLine();
-		System.out.print("DEPOSITO INICIAL: S/N" );
+		edd.nextLine();
+		String nome = edd.nextLine();
+
+		System.out.println("DEPOSITO INICIAL: S/N ");
+		System.out.print("OPÇÃO: ");
 		String escolha = edd.next();
 		edd.nextLine();
 
 		if (escolha.charAt(0) == 'S') {
-			System.out.print("DEPOSITO INICIAL");
-			double saldo = edd.nextDouble();
+			System.out.print("DEPOSITO INICIAL: R$");
+			double depositoInicial = edd.nextDouble();
 
-			Account conta = new Account(numeroConta, nome, saldo);
+			conta = new Account(numeroConta, nome, depositoInicial);
 
-			System.out.println("CONTA: " + conta.getNumeroConta() + " - TITULAR: " + conta.getNome() + " - SALDO: R$"
-					+ conta.getSaldo());
-			
-			System.out.print("ADIONAR VALOR: R$");
-			double deposito = edd.nextDouble();
-			conta.deposito(deposito);
-			
-			System.out.println("CONTA: " + conta.getNumeroConta() + " - TITULAR: " + conta.getNome() + " - SALDO: R$"
-					+ conta.getSaldo());
-			
-			System.out.print("SACAR VALOR: R$");
-			double saque = edd.nextDouble();
-			conta.saque(saque);
-			
-			System.out.println("CONTA: " + conta.getNumeroConta() + " - TITULAR: " + conta.getNome() + " - SALDO: R$"
-					+ conta.getSaldo());
-			
 		} else {
-			Account conta = new Account(numeroConta, nome);
+			conta = new Account(numeroConta, nome);
 
-			System.out.println("CONTA: " + conta.getNumeroConta() + " - TITULAR: " + conta.getNome() + " - SALDO: R$"
-					+ conta.getSaldo());
-			
-			System.out.print("ADIONAR VALOR: R$");
-			double deposito = edd.nextDouble();
-			conta.deposito(deposito);
-			
-			System.out.println("CONTA: " + conta.getNumeroConta() + " - TITULAR: " + conta.getNome() + " - SALDO: R$"
-					+ conta.getSaldo());
-			
-			System.out.print("SACAR VALOR: R$");
-			double saque = edd.nextDouble();
-			conta.saque(saque);
-			
-			System.out.println("CONTA: " + conta.getNumeroConta() + " - TITULAR: " + conta.getNome() + " - SALDO: R$"
-					+ conta.getSaldo());
 		}
+
+		System.out.println("DADOS DA CONTA");
+		System.out.println(conta.toString());
+		
+		System.out.print("ADIONAR VALOR: R$");
+		double deposito = edd.nextDouble();
+		conta.deposito(deposito);
+		
+		System.out.println(conta.toString());
+
+		System.out.print("SACAR VALOR: R$");
+		double saque = edd.nextDouble();
+		conta.saque(saque);
+		
+		System.out.println(conta.toString());
+
 		edd.close();
 	}
 }
