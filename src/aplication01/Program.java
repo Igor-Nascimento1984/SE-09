@@ -20,14 +20,15 @@ public class Program {
 		System.out.print("QUANTIDADE:");
 		int quantidade = edd.nextInt();
 
-		Product produto = new Product(nome, preco,quantidade);
-		
-		produto.setNome("COMPUTADOR");
-		System.out.println("ATUALIAZAÇÃO: " + produto.getNome());
-		
-		produto.setPreco(1200.00);
-		System.out.println("ATUALIAZAÇÃO: " + produto.getPreco());
-		
+		Product produto = new Product(nome, preco, quantidade);
+
+		/*
+		 * produto.setNome("COMPUTADOR"); System.out.println("ATUALIAZAÇÃO: " +
+		 * produto.getNome());
+		 * produto.setPreco(1200.00); System.out.println("ATUALIAZAÇÃO: " +
+		 * produto.getPreco());
+		 */
+
 		System.out.println(produto.toString());
 
 		System.out.print("ADICONAR PRODUTO: ");
