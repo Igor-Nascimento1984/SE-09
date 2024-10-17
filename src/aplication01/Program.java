@@ -17,15 +17,21 @@ public class Program {
 		String nome = edd.nextLine();
 		System.out.print("PREÇO:");
 		double preco = edd.nextDouble();
-		/*System.out.print("QUANTIDADE:");
-		int quantidade = edd.nextInt();*/
+		System.out.print("QUANTIDADE:");
+		int quantidade = edd.nextInt();
 
-		Product produto = new Product(nome, preco);
+		Product produto = new Product(nome, preco,quantidade);
+		
+		produto.setNome("COMPUTADOR");
+		System.out.println("ATUALIAZAÇÃO: " + produto.getNome());
+		
+		produto.setPreco(1200.00);
+		System.out.println("ATUALIAZAÇÃO: " + produto.getPreco());
 		
 		System.out.println(produto.toString());
 
 		System.out.print("ADICONAR PRODUTO: ");
-		int quantidade = edd.nextInt();
+		quantidade = edd.nextInt();
 		produto.addProduto(quantidade);
 		System.out.println(produto.toString());
 		System.out.print("RETIRAR PRODUTO: ");

@@ -33,6 +33,21 @@ public class Product {
 		return quantidade;
 	}
 	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
+	
+	/*
+	 * PARA ADICIONAR/RETIRAR PRODUTOS DO TEMOS OS METODOS. 
+	 * public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}*/
+	
 	public double quanTotalEmEstoque() {
 		return preco*quantidade;
 	}
