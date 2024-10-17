@@ -15,19 +15,21 @@ public class Account {
 		this.saldo = 0;
 	}
 
-	public Account(int numeroConta, String nome, double saldo) {
+	public Account(int numeroConta, String nome, double saldoInicial) {
 		this.numeroConta = numeroConta;
 		this.nome = nome;
-		this.saldo = saldo;
+		deposito(saldoInicial);
 	}
 
 	public int getNumeroConta() {
 		return numeroConta;
 	}
 
-	public void setNumeroConta(int numeroConta) {
+	/*
+	 *  O NUMERO DA CONTA NÃO PODE SER MODIFICADA 
+	 * public void setNumeroConta(int numeroConta) {
 		this.numeroConta = numeroConta;
-	}
+	}*/
 
 	public String getNome() {
 		return nome;

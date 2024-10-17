@@ -16,7 +16,7 @@ public class Program {
 		int numeroConta = edd.nextInt();
 		System.out.print("TITULAR:");
 		String nome = edd.next();
-		// edd.nextLine();
+		//edd.nextLine();
 		System.out.print("DEPOSITO INICIAL: S/N" );
 		String escolha = edd.next();
 		edd.nextLine();
