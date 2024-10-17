@@ -2,9 +2,9 @@ package entities;
 
 public class Product {
 	
-	public String nome;
-	public double preco;
-	public int quantidade;
+	private String nome;
+	private double preco;
+	private int quantidade;
 	
 	public Product() {
 		}
@@ -19,6 +19,18 @@ public class Product {
 		this.nome = nome;
 		this.preco = preco;
 		this.quantidade = 0;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public double getPreco() {
+		return preco;
+	}
+	
+	public int getQuantidade() {
+		return quantidade;
 	}
 	
 	public double quanTotalEmEstoque() {
